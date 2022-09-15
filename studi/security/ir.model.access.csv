@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_studi_prodi,access.studi.prodi,model_studi_prodi,,1,1,1,1
+access_studi_kelas,access.studi.kelas,model_studi_kelas,,1,1,1,1
+access_studi_mahasiswa,access.studi.mahasiswa,model_studi_mahasiswa,,1,1,1,1
+access_studi_matakuliah,access.studi.matakuliah,model_studi_matakuliah,,1,1,1,1
+access_studi_dosen,access.studi.dosen,model_studi_dosen,,1,1,1,1
+access_studi_kprodi,access.studi.kprodi,model_studi_kprodi,,1,1,1,1

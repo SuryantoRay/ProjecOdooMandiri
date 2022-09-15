@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="studi.list">
+      <field name="name">studi list</field>
+      <field name="model">studi.studi</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="studi.action_window">
+      <field name="name">studi window</field>
+      <field name="res_model">studi.studi</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="studi.action_server">
+      <field name="name">studi server</field>
+      <field name="model_id" ref="model_studi_studi"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="studi" id="studi.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="studi.menu_1" parent="studi.menu_root"/>
+    <menuitem name="Menu 2" id="studi.menu_2" parent="studi.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="studi.menu_1_list" parent="studi.menu_1"
+              action="studi.action_window"/>
+    <menuitem name="Server to list" id="studi" parent="studi.menu_2"
+              action="studi.action_server"/>
+-->
+  </data>
+</odoo>

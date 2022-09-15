@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record id="studi_kelas_view_tree" model="ir.ui.view">
+        <field name="name">studi.kelas.view.tree</field>
+        <field name="model">studi.kelas</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="prodi_id"/>
+                <field name="angkatan"/>
+                <field name="kapasitas"/>
+                <field name="kurang"/>
+                <field name="jumlah_mahasiswa"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="studi_kelas_view_form" model="ir.ui.view">
+        <field name="name">studi.kelas.view.form</field>
+        <field name="model">studi.kelas</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="data_kelas" string="Data Kelas">
+                        <field name="name"/>
+                        <field name="angkatan"/>
+                        <field name="kapasitas"/>
+                        <field name="kurang"/>
+                        <field name="jumlah_mahasiswa"/>
+                    </group>
+                    <group name="prodi" string="Program Studi">
+                        <field name="prodi_id"/>
+                    </group>
+                    <group name="daftar_mahasiswa" string="Daftar Mahasiswa">
+                        <field name="mahasiswa_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="studi_kelas_action" model="ir.actions.act_window">
+        <field name="name">Kelas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">studi.kelas</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="studi_kelas_menu_act"
+        name="Daftar Kelas"
+        parent="studi_prodi_menu_categ"
+        action="studi_kelas_action"
+        sequence="20"/>
+</odoo>

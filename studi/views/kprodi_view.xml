@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record id="studi_kprodi_view_tree" model="ir.ui.view">
+        <field name="name">studi.kprodi.view.tree</field>
+        <field name="model">studi.kprodi</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="nis"/>
+                <field name="id_kprodi"/>
+                <field name="tgl_lahir"/>
+                <field name="inisial"/>
+                <field name="prodi_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="studi_kprodi_view_form" model="ir.ui.view">
+        <field name="name">studi.kprodi.view.form</field>
+        <field name="model">studi.kprodi</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="data_kprodi" string="Data Kepala Program Studi">
+                        <field name="name"/>
+                        <field name="nis"/>
+                        <field name="tgl_lahir"/>
+                        <field name="inisial"/>
+                    </group>
+                    <group name="kprodi" string="Kepala Program Studi">
+                        <field name="prodi_id"/>
+                        <field name="id_kprodi"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="studi_kprodi_action" model="ir.actions.act_window">
+        <field name="name">Kepala Program Studi</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">studi.kprodi</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="studi_kprodi_menu_act"
+        name="Kepala Program Studi"
+        parent="studi_dosen_menu_ceteg"
+        action="studi_kprodi_action"
+        sequence="10"/>
+
+</odoo>

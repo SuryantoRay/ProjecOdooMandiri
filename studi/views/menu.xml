@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <menuitem
+        id="studi_menu_root"
+        name="IT DEL"
+        sequence="10"/>
+
+    <menuitem
+        id="studi_prodi_menu_categ"
+        name="Program Studi"
+        parent="studi_menu_root"
+        sequence="10"/>
+
+    <menuitem
+        id="studi_matakuliah_menu_ceteg"
+        name="Matakuliah"
+        parent="studi_menu_root"
+        sequence="20"/>
+
+    <menuitem
+        id="studi_dosen_menu_ceteg"
+        name="Dosen"
+        parent="studi_menu_root"
+        sequence="30"/>
+
+
+</odoo>

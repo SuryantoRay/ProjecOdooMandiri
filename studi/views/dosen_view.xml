@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record id="studi_dosen_view_tree" model="ir.ui.view">
+        <field name="name">studi.dosen.view.tree</field>
+        <field name="model">studi.dosen</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="nis"/>
+                <field name="tgl_lahir"/>
+                <field name="inisial"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="studi_dosen_view_form" model="ir.ui.view">
+        <field name="name">studi.dosen.view.form</field>
+        <field name="model">studi.dosen</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="data_dosen_M" string="Data Dosen">
+                        <field name="name"/>
+                        <field name="nis"/>
+                        <field name="tgl_lahir"/>
+                        <field name="inisial"/>
+                    </group>
+                    <group name="koordiprodi" string="Koordinator Matakuliah">
+                        <field name="matakuliah_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="studi_dosen_action" model="ir.actions.act_window">
+        <field name="name">Dosen</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">studi.dosen</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="studi_dosen_menu_act"
+        name="Dosen Matakuliah"
+        parent="studi_dosen_menu_ceteg"
+        action="studi_dosen_action"
+        sequence="20"/>
+
+</odoo>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record id="studi_prodi_view_tree" model="ir.ui.view">
+        <field name="name">studi.prodi.view.tree</field>
+        <field name="model">studi.prodi</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="gambar"/>
+                <field name="name"/>
+                <field name="kode_prodi"/>
+                <field name="jumlah_kelas"/>
+                <field name="jumlah_mahasiswa"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="studi_prodi_view_form" model="ir.ui.view">
+        <field name="name">studi.prodi.view.form</field>
+        <field name="model">studi.prodi</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="prodi" string="Data Program Studi">
+                        <field name="name"/>
+                        <field name="kode_prodi"/>
+                        <field name="jumlah_kelas"/>
+                        <field name="jumlah_mahasiswa"/>
+                    </group>
+                    <group name="gambar_prodi" string="Gambar">
+                        <field name="gambar"/>
+                    </group>
+                    <group name="daftar_kelas" string="Daftar Kelas">
+                        <field name="kelas_id"/>
+                    </group>
+                    <group name="daftar_mahasiswa" string="Daftar Mahasiswa">
+                        <field name="mahasiswa_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="studi_prodi_action" model="ir.actions.act_window">
+        <field name="name">Program Studi</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">studi.prodi</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="studi_prodi_menu_act"
+        name="Daftar Program Studi"
+        parent="studi_prodi_menu_categ"
+        action="studi_prodi_action"
+        sequence="10"/>
+</odoo>
